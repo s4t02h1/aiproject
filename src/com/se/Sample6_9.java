@@ -1,6 +1,6 @@
 package com.se;
 
-abstract class X {                //抽象クラス
+public abstract class X {                //抽象クラス
 	  protected abstract void methodA();
 	}
 	abstract class Y extends X { }   //抽象クラス

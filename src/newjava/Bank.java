@@ -9,20 +9,27 @@ public class Bank {
 			account[i] = init;
 		}
 	}
-	public int sum() {
+	public synchronized int sum() {
 		for (int i = 0; i < account.length ; i++) {
 			total += account[i];
 		}
 		return total;
 	}
-	public void transfer(int to, int from, int amount) {
-		account[from] -= amount;
-		account[to] += amount;
+	public synchronized void transfer(int to, int from, int amount) {
+		while(account[from] < amount) {
+			try {
+				account[from] -= amount;
+				account[to] += amount;
+				wait();
+			} catch (InterruptedException e) {}
+		}
+		notifyAll();
+		System.out.println("transfer done");
 	}
-	public void show(int i) {
+	public synchronized void show(int i) {
 		System.out.println("口座 " + (i +1) + ":" + account[i] + "円");
 	}
-	public int getAccount(int i) {
+	public synchronized int getAccount(int i) {
 		return account[i];
 	}
 }
