@@ -30,7 +30,7 @@ import java.util.Set;
  * 図書に共通の属性と振舞を定義する。
  */
 
-abstract class Book{
+abstract class Book1{
 
 	/**図書名*/
 	String name;
@@ -45,7 +45,7 @@ abstract class Book{
 	 * @param id
 	 * @return 図書の一意な識別子
 	 */
-	public Book(String name, String id) {
+	public Book1(String name, String id) {
 		this.name = name;
 		this.id = id;
 	}
@@ -87,7 +87,7 @@ class RegularBook extends Book {
 	 * @param id 図書の一意な識別子
 	 */
 	public RegularBook(String name, String id) {
-		super(name, id);
+		super();
 	}
 
 	/**
@@ -95,6 +95,7 @@ class RegularBook extends Book {
 	 */
 
 	public String toString() {
+		String name = null;
 		return "Book: " + name + "(" + id + ")";
 	}
 }
@@ -109,6 +110,7 @@ class Magazine extends Book{
 
 	/**号数*/
 	int issueNo;
+	public Object name;
 
 	/**
 	 * コンストラクタ
@@ -119,11 +121,12 @@ class Magazine extends Book{
 	 * @param id
 	 */
 	public Magazine(String name, int issueNo, String id) {
-		super(name, id);
+		super();
 		this.issueNo = issueNo;
 	}
 
 	public String toString() {
+		String name = null;
 		return "Magazine: " + name + ", No." + issueNo
 									+ "(" + id + ")";
 	}
