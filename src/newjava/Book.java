@@ -15,6 +15,7 @@ public class Book implements Comparable<Book>{
 	private String author;
 	private int price;
 	private boolean stock;
+	public Object id;
 
 	public Book() {}
 

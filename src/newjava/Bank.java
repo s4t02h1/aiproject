@@ -32,4 +32,8 @@ public class Bank {
 	public synchronized int getAccount(int i) {
 		return account[i];
 	}
+	public void start() {
+
+
+	}
 }

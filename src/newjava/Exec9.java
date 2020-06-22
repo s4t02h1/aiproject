@@ -36,7 +36,7 @@ class Login{
 }
 class MyLogin extends Login{
 		int[] pwList = {1234, 5678};
-		int upw;
+		String upw;
 		public void getInfo() {
 			upw = Input.inputString();
 		}

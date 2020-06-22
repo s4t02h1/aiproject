@@ -2,6 +2,8 @@ package newjava;
 
 interface A {
 	void talk();
+
+	void methodA();
 }
 interface B {
 	void hello();
@@ -11,7 +13,7 @@ interface C extends A, B {
 	void bye();
 }
 
-class X implements C {
+abstract class X implements C {
 
 	@Override
 	public void talk() {

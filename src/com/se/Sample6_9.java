@@ -1,7 +1,12 @@
 package com.se;
 
-public abstract class X {                //抽象クラス
+abstract class X {                //抽象クラス
 	  protected abstract void methodA();
+
+	public void hello() {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
 	}
 	abstract class Y extends X { }   //抽象クラス
 	class Z extends Y {              //具象クラス
