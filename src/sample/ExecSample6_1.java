@@ -14,7 +14,7 @@ class Sales2 extends Employee6{
 	}
 }
 
-public class Sample6_1 {
+public class ExecSample6_1 {
 	public static void main(String[] args) {
 		Sales2 s = new Sales2();
 		System.out.println("clientName: " + s.getClientName());
